@@ -90,10 +90,82 @@
 /*!*********************!*\
   !*** ./src/main.js ***!
   \*********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _view_loading_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./view/loading.js */ "./src/view/loading.js");
 
 
+const render = (container, template, place) => {
+    container.insertAdjacentHTML(place, template);
+}
+
+const siteMainElement = document.querySelector('.main');
+
+render(siteMainElement, _view_loading_js__WEBPACK_IMPORTED_MODULE_0__["createLoadingTemplate"], `beforeend`);
+console.log('test');
+
+/***/ }),
+
+/***/ "./src/view/loading.js":
+/*!*****************************!*\
+  !*** ./src/view/loading.js ***!
+  \*****************************/
+/*! exports provided: createLoadingTemplate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createLoadingTemplate", function() { return createLoadingTemplate; });
+const createLoadingTemplate = () => {
+    return `<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="./css/normalize.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+      <title>Cinemaddict</title>
+    </head>
+    <body>
+    
+    <header class="header">
+      <h1 class="header__logo logo">Cinemaddict</h1>
+    </header>
+    
+    <main class="main">
+      <nav class="main-navigation">
+        <div class="main-navigation__items">
+          <a href="#all" class="main-navigation__item main-navigation__item--active">All movies</a>
+          <a href="#watchlist" class="main-navigation__item">Watchlist <span class="main-navigation__item-count">0</span></a>
+          <a href="#history" class="main-navigation__item">History <span class="main-navigation__item-count">0</span></a>
+          <a href="#favorites" class="main-navigation__item">Favorites <span class="main-navigation__item-count">0</span></a>
+        </div>
+        <a href="#stats" class="main-navigation__additional">Stats</a>
+      </nav>
+    
+      <section class="films">
+        <section class="films-list">
+          <h2 class="films-list__title">Loading...</h2>
+        </section>
+      </section>
+    </main>
+    
+    
+    <footer class="footer">
+      <section class="footer__logo logo logo--smaller">Cinemaddict</section>
+      <section class="footer__statistics">
+        <p>0 movies inside</p>
+      </section>
+    </footer>
+    
+    </body>
+    </html>
+    `
+}
 
 /***/ })
 
