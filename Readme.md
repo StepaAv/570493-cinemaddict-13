@@ -1,7 +1,7 @@
 # Проект «Киноман» [![Check status][check-image]][check-url]
 
 * Студент: [Stepan Avdevich](https://up.htmlacademy.ru/ecmascript/13/user/570493).
-* Наставник: `Неизвестно`.
+* Наставник: `Отсутствует` .
 
 ---
 
