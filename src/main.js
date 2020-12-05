@@ -7,4 +7,4 @@ const render = (container, template, place) => {
 const siteMainElement = document.querySelector('.main');
 
 render(siteMainElement, createLoadingTemplate(), `beforeend`);
-console.log('test');
+console.log('test2');
