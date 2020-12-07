@@ -1,10 +1,24 @@
-import {createLoadingTemplate} from "./view/loading.js";
+const conainerMain = document.querySelector('.main');
+import {createFiltersStatsTemplate} from "./view/filters-stats.js";
+import {createSortTemplate} from "./view/sort.js";
+import {createFilmsListContainerTemplate} from "./view/films-list-container.js";
+import {createFilmCardTemplate} from "./view/film-card.js";
+import {createShowMoreBtnTemplate} from "./view/show-more-btn.js";
 
 const render = (container, template, place) => {
     container.insertAdjacentHTML(place, template);
 }
 
-const siteMainElement = document.querySelector('.main');
+render(conainerMain, createFiltersStatsTemplate(), `beforeend`);
+render(conainerMain, createSortTemplate(), `beforeend`);
+render(conainerMain, createFilmsListContainerTemplate(), `beforeend`);
 
-render(siteMainElement, createLoadingTemplate(), `beforeend`);
-console.log('test2');
+const containerFilms = document.querySelector('.films-list__container');
+
+
+for (let i = 0; i < 6; i++) {
+    render(containerFilms, createFilmCardTemplate(), `beforeend`);
+}
+render(conainerMain, createShowMoreBtnTemplate(), `beforeend`);
+console.log('i have no idea what im doing')
+
